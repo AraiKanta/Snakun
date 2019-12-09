@@ -8,6 +8,9 @@ using UnityEngine;
 /// </summary>
 public class TargetBlockController : MonoBehaviour
 {
+    [SerializeField] int m_score = 100;
+
+    bool m_isDead = false;
     void Start()
     {
 
@@ -18,6 +21,7 @@ public class TargetBlockController : MonoBehaviour
 
     }
 
+
     /// <summary>
     /// Collider に衝突判定があった時に呼ばれる
     /// </summary>
@@ -26,7 +30,7 @@ public class TargetBlockController : MonoBehaviour
     {
         Debug.Log("Enter OnCollisionEnter2D."); // 関数が呼び出されたら Console にログを出力する
 
-        // 衝突相手がボールだったら自分自身を破棄する
+        // 衝突相手が蜂だったら自分自身を破棄する
         if (collision.gameObject.tag == "Player")
         {
             Destroy(this.gameObject);
@@ -41,10 +45,26 @@ public class TargetBlockController : MonoBehaviour
     {
         Debug.Log("Enter OnTriggerEnter2D."); // 関数が呼び出されたら Console にログを出力する
 
-        // 衝突相手がボールだったら自分自身を破棄する
+
+        if (m_isDead == false)
+        {
+            m_isDead = true;
+            GameObject go = GameObject.Find("GameManager");
+            if (go)
+            {
+                GameManager1 gm = go.GetComponent<GameManager1>();
+                if (gm)
+                {
+                    gm.AddScore(m_score);
+                }
+            }
+        }
+        // 衝突相手が蜂だったら自分自身を破棄する
         if (collision.gameObject.tag == "Player")
         {
             Destroy(this.gameObject);
         }
+
+        
     }
 }

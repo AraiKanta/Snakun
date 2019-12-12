@@ -8,9 +8,10 @@ public class GameManager1 : MonoBehaviour
     /// <summary>スコア表示用 Text</summary>
     [SerializeField] Text m_scoreText;
     /// <summary>得点</summary>
-    int m_score;
+    public static int m_score;
     /// <summary>タイマー</summary>
     float m_timer;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,12 @@ public class GameManager1 : MonoBehaviour
     {
         m_score += score;
         Debug.Log(score);
-        m_scoreText.text = "スコア:"+ m_score.ToString("");
+        m_scoreText.text = "スコア:" + m_score.ToString("");
     }
+
+    public static int GetS()
+    {
+        return m_score;
+    }
+
 }

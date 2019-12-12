@@ -8,7 +8,7 @@ using UnityEngine;
 /// </summary>
 public class TargetBlockController : MonoBehaviour
 {
-    [SerializeField] int m_score = 100;
+    [SerializeField] int m_score;
 
     bool m_isDead = false;
     void Start()

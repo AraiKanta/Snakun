@@ -525,6 +525,8 @@ GameObject:
   - component: {fileID: 465189536}
   - component: {fileID: 465189537}
   - component: {fileID: 465189538}
+  - component: {fileID: 465189540}
+  - component: {fileID: 465189539}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -572,6 +574,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   small_flower_red: {fileID: 3853469486367159298, guid: a5b231bb8c23c274da16d74d7092f576,
+    type: 3}
+  xMinPosition: -12
+  xMaxPosition: 12
+  yMinPosition: -10
+  yMaxPosition: 10
+  zMinPosition: 0.01
+  zMaxPosition: 0.02
+--- !u!114 &465189539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465189535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e09a48aee6ea8f44ab2523feaa8afa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  small_flower_yellow: {fileID: 276552826970075178, guid: b81ee2c4efbbae74f838455b50abe9c5,
+    type: 3}
+  xMinPosition: -12
+  xMaxPosition: 12
+  yMinPosition: -10
+  yMaxPosition: 10
+  zMinPosition: 0.01
+  zMaxPosition: 0.02
+--- !u!114 &465189540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465189535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be350f7b725516049a877c9802e39fef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  small_flower_blue: {fileID: 5086818836695854008, guid: c03aa6159dc3562458dc48b3d7bb7849,
     type: 3}
   xMinPosition: -12
   xMaxPosition: 12

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +9,8 @@ using UnityEngine;
 /// </summary>
 public class TargetBlockController : MonoBehaviour
 {
-    [SerializeField] int m_score;
+    [SerializeField] double m_score;
+    [SerializeField] int m_combo;
 
     bool m_isDead = false;
     void Start()
@@ -55,13 +57,14 @@ public class TargetBlockController : MonoBehaviour
                 GameManager1 gm = go.GetComponent<GameManager1>();
                 if (gm)
                 {
-                    gm.AddScore(m_score);
+                    gm.AddScore(m_score, m_combo);
                 }
             }
         }
         // 衝突相手が蜂だったら自分自身を破棄する
         if (collision.gameObject.tag == "Player")
         {
+            
             Destroy(this.gameObject);
         }
 

@@ -53,4 +53,10 @@ public class GameManager1 : MonoBehaviour
     {
         return m_combo;
     }
+
+    public static void Reset()
+    {
+        m_combo = 0;
+        m_score = 0;
+    }
 }

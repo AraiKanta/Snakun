@@ -21,6 +21,7 @@ public class SceneLoader : MonoBehaviour
     //ボタンを押した時の処理
     public void PushButton()
     {
+        GameManager1.Reset();
         SceneManager.LoadScene("GAME");
     }
 }

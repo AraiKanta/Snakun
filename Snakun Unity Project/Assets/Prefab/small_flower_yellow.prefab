@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5856715702434268961}
   - component: {fileID: 4158213094410781034}
   - component: {fileID: 5821770651562423719}
+  - component: {fileID: 3651341708266510854}
   m_Layer: 0
   m_Name: small_flower_yellow
   m_TagString: Untagged
@@ -133,3 +134,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &3651341708266510854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276552826970075178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d1b790ad6b4ece4fbb873a2c61f0c73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScoreUI: {fileID: 1822941997671765500, guid: ea9691a3be59de24f93d2ce3892a070c, type: 3}

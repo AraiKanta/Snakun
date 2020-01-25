@@ -64,10 +64,12 @@ public class TargetBlockController : MonoBehaviour
         // 衝突相手が蜂だったら自分自身を破棄する
         if (collision.gameObject.tag == "Player")
         {
-            
+            var takeScore = GetComponent<TakeScore>();
+            if (takeScore != null)
+            {
+                takeScore.Score(collision);
+            }
             Destroy(this.gameObject);
         }
-
-        
     }
 }

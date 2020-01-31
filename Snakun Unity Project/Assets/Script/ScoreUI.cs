@@ -21,7 +21,7 @@ public class ScoreUI : MonoBehaviour
         transform.rotation = Camera.main.transform.rotation;
         transform.position += Vector3.up * moveSpeed * Time.deltaTime;
 
-        ScoreText.color = Color.Lerp(ScoreText.color, new Color(1f, 0f, 0f, 0f), fadeOutSpeed * Time.deltaTime);
+        ScoreText.color = Color.Lerp(ScoreText.color, new Color(1f, 1f, 1f, 0f), fadeOutSpeed * Time.deltaTime);
 
         if (ScoreText.color.a <= 0.1f)
         {

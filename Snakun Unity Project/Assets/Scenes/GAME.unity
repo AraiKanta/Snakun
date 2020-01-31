@@ -820,7 +820,7 @@ MonoBehaviour:
     xMax: 100
     yMin: -100
     yMax: 100
-  followStrength: 0.01
+  followStrength: 0.02
 --- !u!212 &586936382
 SpriteRenderer:
   m_ObjectHideFlags: 0

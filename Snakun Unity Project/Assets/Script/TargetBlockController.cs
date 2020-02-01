@@ -11,6 +11,12 @@ public class TargetBlockController : MonoBehaviour
 {
     [SerializeField] double m_score;
     [SerializeField] int m_combo;
+    /// <summary>赤の花を何個取ったか</summary>
+    [SerializeField] int m_redFlower;
+    /// <summary>青の花を何個取ったか</summary>
+    [SerializeField] int m_blueFlower;
+    /// <summary>黄色の花を何個取ったか</summary>
+    [SerializeField] int m_yellowFlower;
 
     bool m_isDead = false;
     void Start()
@@ -57,7 +63,7 @@ public class TargetBlockController : MonoBehaviour
                 GameManager1 gm = go.GetComponent<GameManager1>();
                 if (gm)
                 {
-                    gm.AddScore(m_score, m_combo);
+                    gm.AddScore(m_score, m_combo, m_redFlower, m_blueFlower, m_yellowFlower);
                 }
             }
         }

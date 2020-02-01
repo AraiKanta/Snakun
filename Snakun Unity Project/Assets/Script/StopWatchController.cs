@@ -14,7 +14,6 @@ public class StopWatchController : MonoBehaviour
     bool m_isWorking;
     /// <summary>タイマー</summary>
     float m_timer;
-
     void Update()
     {
         // 動作中ならタイマーを加算して表示を更新する

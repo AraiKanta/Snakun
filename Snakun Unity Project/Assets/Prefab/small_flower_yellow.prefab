@@ -97,6 +97,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_score: 150
   m_combo: 1
+  m_redFlower: 0
+  m_blueFlower: 0
+  m_yellowFlower: 1
 --- !u!58 &4158213094410781034
 CircleCollider2D:
   m_ObjectHideFlags: 0

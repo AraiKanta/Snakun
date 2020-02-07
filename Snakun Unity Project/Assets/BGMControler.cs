@@ -23,11 +23,31 @@ public class BGMControler : MonoBehaviour
 
     void OnActiveSceneChanged (Scene prevScene, Scene nextScene)
     {
-        if (beforeScene == "Title" && nextScene.name == null)
+        if (!BGM_game.isPlaying && !BGM_menu.isPlaying)
         {
             BGM_menu.Play();
         }
-        if (beforeScene == "Title" && nextScene.name == "GAME")
+        else if (BGM_menu.isPlaying)
+        {
+            if (beforeScene == "Title" && nextScene.name == "GAME")
+            {
+                BGM_menu.Stop();
+                BGM_game.Play();
+            }
+            if (beforeScene == "asobikata" && nextScene.name == "GAME")
+            {
+                BGM_menu.Stop();
+                BGM_game.Play();
+            }
+        }
+        else if (BGM_game.isPlaying)
+        {
+            if (beforeScene == "GAME" && nextScene.name == "Result")
+            {
+                BGM_game.Stop();
+            }
+        }
+        /*if (beforeScene == "Title" && nextScene.name == "GAME")
         {
             BGM_menu.Stop();
             BGM_game.Play();
@@ -41,16 +61,18 @@ public class BGMControler : MonoBehaviour
 
         if (beforeScene == "GAME" && nextScene.name == "Result")
         {
-            //Title_BGM.Stop();
             BGM_game.Stop();
         }
 
         if (beforeScene == "Result" && nextScene.name == "Title")
         {
             BGM_menu.Play();
-            //Game_BGM.Stop();
         }
 
+        if (!BGM_menu.isPlaying && beforeScene == "Title" && !BGM_game.isPlaying)
+        {
+            BGM_menu.Play();
+        }*/
         beforeScene = nextScene.name;
     }
 

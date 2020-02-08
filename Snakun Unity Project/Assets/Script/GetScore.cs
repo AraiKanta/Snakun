@@ -31,9 +31,9 @@ public class GetScore : MonoBehaviour
 
         m_scoreText.text = "スコア:" + s.ToString("");
         m_comboText.text = "コンボ:" + c.ToString("");
-        redFlower.text = "赤い花:" + rf.ToString("");
-        blueFlower.text = "青い花:" + bf.ToString("");
-        yellowFlower.text = "黄色い花:" + yf.ToString("");
+        redFlower.text = "あかいはな:" + rf.ToString("");
+        blueFlower.text = "あおいはな:" + bf.ToString("");
+        yellowFlower.text = "きいろいはな:" + yf.ToString("");
     }
 
     // Update is called once per frame
